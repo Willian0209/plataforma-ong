@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">ONG Exemplo</a>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Cadastro</h1>
+    <p>Preencha seus dados para se tornar voluntário ou apoiador.</p>
+
+    <form id="formCadastro" novalidate>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" required autocomplete="name">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" maxlength="15" placeholder="(00) 00000-0000" required>
+
+        <label for="nascimento">Data de nascimento</label>
+        <input id="nascimento" name="nascimento" type="date" required>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text" required>
+
+        <label for="cep">CEP</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" maxlength="9" placeholder="00000-000" required>
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text" required>
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <!-- completar com todas as unidades federativas -->
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferências</legend>
+        <label for="tipo">Sou</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="voluntario">Voluntário</option>
+          <option value="doador">Doador</option>
+          <option value="visitante">Visitante</option>
+        </select>
+
+        <label for="interesse">Áreas de interesse</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="areas" value="educacao"> Educação</label>
+          <label><input type="checkbox" name="areas" value="saude"> Saúde</label>
+          <label><input type="checkbox" name="areas" value="meioambiente"> Meio ambiente</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn">Enviar cadastro</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="ano3"></span> ONG Exemplo</p>
+    </div>
+  </footer>
+</body>
+</html>

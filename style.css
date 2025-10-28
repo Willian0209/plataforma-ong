@@ -1,0 +1,29 @@
+:root{--max-width:1100px}
+
+*{box-sizing:border-box}
+
+body{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.4;margin:0;color:#222}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+header{background:#f5f5f5;padding:0.5rem 0}
+
+header .logo{font-weight:700;text-decoration:none}
+
+nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
+
+.hero{background:#e9f5ff;padding:2rem 0}
+
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;text-decoration:none;border:0;background:#0077cc;color:white}
+
+.projeto{border-bottom:1px solid #eee;padding:1rem 0}
+
+form label{display:block;margin-top:.6rem}
+
+input,select,textarea,button{font:inherit;padding:.5rem;border:1px solid #ccc;border-radius:4px;width:100%}
+
+.checkbox-group label{display:inline-block;margin-right:1rem}
+
+@media(min-width:800px){nav ul{justify-content:flex-end} .sidebar{position:fixed;right:2rem;width:220px}}
+
+:focus{outline:3px solid Highlight;outline-offset:2px}
